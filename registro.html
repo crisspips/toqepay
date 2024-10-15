@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - toqepay</title>
+    <meta name="description" content="Regístrate en toqepay para enviar dinero de forma rápida y segura.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .registro-form {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: var(--color-navy-blue);
+            border-radius: 10px;
+        }
+        .registro-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registro-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .registro-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        .registro-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--color-teal);
+            color: var(--color-light-white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registro-form button:hover {
+            background-color: var(--highlight-green);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>toqepay</h1>
+        </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Nuestra Historia</a></li>
+                <li><a href="#">Pagos</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="registro-form">
+            <h2>Registro en toqepay</h2>
+            <form id="registroForm" aria-label="Formulario de registro">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Número de teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 toqepay. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría la lógica para procesar el formulario
+            alert('Formulario enviado. En un sistema real, aquí se procesaría el registro.');
+        });
+    </script>
+</body>
+</html>

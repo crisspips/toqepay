@@ -1,0 +1,417 @@
+/* Variables CSS */
+:root {
+    --color-dark-blue: #001F3F;
+    --color-navy-blue: #002F6C;
+    --color-teal: #008080;
+    --color-light-white: #F5F5F5;
+    --color-dark-green: #026e6e;
+    --highlight-green: #026e6e;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-dark-blue);
+    color: var(--color-light-white);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: var(--color-navy-blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: var(--color-light-white);
+    margin-bottom: 15px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 5px 10px;
+}
+
+header nav ul li a {
+    color: var(--color-light-white);
+    text-decoration: none;
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.header-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background: var(--color-teal);
+    color: var(--color-light-white);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: 195px 20px 50px; /* Increased top padding by 15px */
+    background: linear-gradient(135deg, var(--color-dark-blue), #0074D9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.exchange-form {
+    background: var(--color-navy-blue);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.exchange-form label {
+    display: block;
+    margin: 15px 0 5px;
+    color: var(--color-light-white);
+}
+
+.exchange-form input, .exchange-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background: var(--color-light-white);
+    color: var(--color-navy-blue);
+}
+
+.exchange-form p {
+    margin: 10px 0;
+    color: var(--color-light-white);
+}
+
+.exchange-form button {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-teal);
+    color: var(--color-light-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Additional Info Section */
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: var(--color-dark-green);
+}
+
+.info-text {
+    color: var(--color-light-white);
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Trusted Partners Section */
+.trusted-partners {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-dark-blue), #58affc);
+}
+
+.trusted-partners h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.trusted-partners p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.partners-logos img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.partners-logos img[src*="yape.png"] {
+    max-width: 60px;
+}
+
+/* Contact Buttons Section */
+.contact-buttons {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--color-navy-blue);
+}
+
+.contact-buttons h2 {
+    color: var(--color-light-white);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--highlight-green);
+    color: var(--color-light-white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-btn:hover {
+    background-color: var(--color-dark-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--color-dark-blue), #5cb1fc);
+    color: #F5F5F5;
+}
+
+/* Estilos para los selectores de moneda con banderas */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.currency-flag {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    pointer-events: none;
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+}
+
+/* Mejoras de accesibilidad */
+button:focus, input:focus, select:focus {
+    outline: 2px solid var(--color-teal);
+}
+
+/* Media Queries para diseño responsivo */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    header .logo h1 {
+        margin-bottom: 0;
+    }
+
+    .header-buttons {
+        margin-top: 0;
+    }
+
+    .hero {
+        padding: 215px 20px 50px; /* Increased top padding by 15px */
+        justify-content: center;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .hero-image {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .exchange-form {
+        width: 45%;
+    }
+
+    .additional-info {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 100px 50px;
+    }
+
+    .info-text {
+        text-align: left;
+        margin-bottom: 0;
+        width: 45%;
+    }
+
+    .info-image {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        padding: 235px 50px 100px; /* Increased top padding by 15px */
+    }
+
+    .hero-text h2 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 24px;
+    }
+
+    .hero-image, .exchange-form {
+        width: 48%;
+    }
+
+    .trusted-partners h2 {
+        font-size: 32px;
+    }
+
+    .partners-logos img {
+        max-width: 150px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero-content, .additional-info {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}

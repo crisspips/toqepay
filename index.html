@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Cambio - toqepay</title>
+    <meta name="description" content="Envía dinero al toque con toqepay. Cambio de divisas rápido y seguro.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>toqepay</h1>
+        </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nuestra Historia</a></li>
+                <li><a href="#">Pagos</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="quote-btn">Inicia sesión</button>
+            <button class="services-btn">Registrarme</button>
+            
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Envíos al toque para ti y tus seres queridos</h2>
+                    <p>Cambia y envía dinero de forma rápida y segura con toqepay</p>
+                </div>
+                <div class="hero-image">
+                    <img src="phone-mockup.png" alt="Pantalla de Teléfono mostrando la aplicación toqepay" width="300" height="600">
+                </div>
+                <div class="exchange-form">
+                    <form id="currencyForm" aria-label="Calculadora de cambio de divisas">
+                        <label for="amount">Ingresa el monto</label>
+                        <input type="number" id="amount" value="1" min="0" step="0.01">
+
+                        <label for="fromCurrency">De</label>
+                        <div class="custom-select">
+                            <select id="fromCurrency">
+                                <option value="CLP" data-flag="chileflag.png">Pesos Chilenos (CLP)</option>
+                                <option value="BOB" data-flag="boliviaflag.png">Pesos Bolivianos (BOB)</option>
+                            </select>
+                            <img src="chileflag.png" alt="Bandera From" class="currency-flag from-flag">
+                        </div>
+
+                        <label for="toCurrency">A</label>
+                        <div class="custom-select">
+                            <select id="toCurrency">
+                                <option value="CLP" data-flag="chileflag.png">Pesos Chilenos (CLP)</option>
+                                <option value="BOB" data-flag="boliviaflag.png">Pesos Bolivianos (BOB)</option>
+                            </select>
+                            <img src="boliviaflag.png" alt="Bandera To" class="currency-flag to-flag">
+                        </div>
+
+                        <p id="exchangeRate">1 CLP = X BOB</p>
+                        <button type="button" onclick="obtenerTasaDeCambio()">Obtener Tasa de Cambio</button>
+                        <p id="lastUpdate">Última actualización de la tasa: 2024-10-13 00:05</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="additional-info">
+            <div class="info-text">
+                <h2>CONFÍA EN NOSOTROS PARA TUS NECESIDADES DE REMESAS</h2>
+                <p>Elegir Toqepay es optar por un servicio de remesas rápido y seguro en cada paso. Únete a nuestra comunidad de usuarios satisfechos que confían en nosotros para enviar dinero a sus seres queridos en todo el mundo.</p>
+            </div>
+            <div class="info-image">
+                <img src="couple-laptop.png" alt="Pareja usando laptop para enviar remesas">
+            </div>
+        </section>
+        <section class="trusted-partners">
+            <h2>Dónde enviar dinero en Bolivia con Toqepay</h2>
+            <p>Retiro de efectivo y depósito bancario con nuestra red de confianza en Bolivia.</p>
+            <div class="partners-logos">
+                <img src="moremoney.png" alt="Logo de More Money Transfers">
+                <img src="bancobcp.png" alt="Logo de Banco BCP">
+                <img src="mercantilsantacruz.png" alt="Logo de Banco Mercantil Santa Cruz">
+                <img src="bancoganadero.png" alt="Logo de Banco Ganadero">
+                <img src="bnb.png" alt="Logo de BNB">
+                <img src="bancobisa.png" alt="Logo de Banco BISA">
+                <img src="bancoeconomico.png" alt="Logo de Banco Económico">
+                <img src="bancounion.png" alt="Logo de Bancounion">
+                <img src="yape.png" alt="Logo de Yape">
+            </div>
+        </section>
+        <section class="contact-buttons">
+            <h2>Contáctanos</h2>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/profile.php?id=100092288483054" target="_blank" class="social-btn" aria-label="Visita nuestra página de Facebook">
+                    <img src="facebook-icon.png" alt="Facebook">
+                    Facebook
+                </a>
+                <a href="https://wa.me/123456789" target="_blank" class="social-btn" aria-label="Contáctanos por WhatsApp">
+                    <img src="whatsapp-icon.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-btn" aria-label="Síguenos en TikTok">
+                    <img src="tiktok-icon.png" alt="TikTok">
+                    TikTok
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 toqepay. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
