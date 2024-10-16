@@ -90,7 +90,7 @@ function obtenerTasaDeCambio() {
     }
 
     const tasasDeCambio = {
-        "CLP_BOB": 0.0120,   // AQUI SE REALIZA EL CAMBIO DE TAZA DIARIO
+        "CLP_BOB": 0.0106,   // AQUI SE REALIZA EL CAMBIO DE TAZA DIARIO
         "BOB_CLP": 80,
     };
 
